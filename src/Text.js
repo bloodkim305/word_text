@@ -1,4 +1,5 @@
-import React from "react";
+import React, { useLayoutEffect } from "react";
+import "./Text.css";
 const word = [
 	{
 		english: "degrade",
@@ -24,32 +25,66 @@ const word = [
 
 const extractQuestion = () => {
 	const test = [];
+	const wordIndexArray = [];
 	let i = 0;
 	while (i < 5) {
 		const wordIndex = Math.floor(Math.random() * word.length);
+		if (wordIndexArray.includes(wordIndex)) {
+			continue;
+		}
+		wordIndexArray.push(wordIndex);
 		test.push(word[wordIndex]);
 		i++;
 	}
 	return test;
 };
 
-function Word({ english, han }) {
+function showAnswer(answerMode) {
+	const hiddenAnswer = document.querySelector(".answer");
+	console.log(hiddenAnswer);
+	if (answerMode) {
+		hiddenAnswer.classList.remove("hidden");
+	}
+}
+
+function EnglishWord({ english, han }) {
 	return (
-		<div className="question">
-			<h4 className="english">{english}</h4>
-			<h4 className="han">{han}</h4>
+		<div className="qAndA">
+			<h4 className="question">{english}</h4>
+			<h4 className="answer hidden">{han}</h4>
 		</div>
 	);
 }
 
-function Text() {
+function HanWord({ english, han }) {
+	return (
+		<div className="qAndA">
+			<h4 className="question">{han}</h4>
+			<h4 className="answer hidden">{english}</h4>
+		</div>
+	);
+}
+
+function Text(englishMode, answerMode) {
 	const questions = extractQuestion();
-	console.log(questions);
+	showAnswer(answerMode);
 	return (
 		<div className="question">
-			{questions.map((question, index) => (
-				<Word key={index}english={question.english} han={question.han} />
-			))}
+			{englishMode.mode
+				? questions.map((question, index) => (
+						<EnglishWord
+							key={index}
+							english={question.english}
+							han={question.han}
+						/>
+				  ))
+				: questions.map((question, index) => (
+						<HanWord
+							key={index}
+							han={question.han}
+							english={question.english}
+						/>
+				  ))}
 		</div>
 	);
 }
