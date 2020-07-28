@@ -47,9 +47,9 @@ const TopBar = ({ handleQuestion, handleAnswer }) => {
           {...questionNumber}
         />
       </div>
-      <div onClick={handleQuestionAndAnswer}>
-        <button className="showingHidden">정답보기&숨기기</button>
-        <button className="setQuestion">문제출제</button>
+      <div className="buttons" onClick={handleQuestionAndAnswer}>
+        <button className="button">정답보기&숨기기</button>
+        <button className="button">문제출제</button>
       </div>
     </form>
   );
