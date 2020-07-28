@@ -1,16 +1,15 @@
 import React from "react";
 import "./EnglishWord.css";
 
-function EnglishWord({ english, han, answerMode }) {
+function EnglishWord({ english, han, answerMode, number }) {
 	return answerMode ? (
-		<li className="qAndA">
-			<div className="question">{english}</div>
-			<span className="answer">{han}</span>
+		<li className="qAndA qAndASize">
+			<div className="question">{`${number + 1}. ${english}`}</div>
+			<div className="answer">{han}</div>
 		</li>
 	) : (
 		<li className="qAndA">
-			<div className="question">{english}</div>
-			<span className="answer hidden">{han}</span>
+			<div className="question">{`${number + 1}. ${english}`}</div>
 		</li>
 	);
 }

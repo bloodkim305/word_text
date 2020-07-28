@@ -1,4 +1,36 @@
-:root {
-  /* size */
-  
+
+form {
+	align-items: center;
+	display: flex;
+	justify-content: center;
+	padding: 10px;
+}
+
+form .questionRange {
+	display: flex;
+  margin-right: 35px;
+ 
+}
+
+.inputForm {
+	width: 6vw;
+	font-size: small;
+	text-align: center;
+	margin-left: 10px;
+  margin-right: 4px;
+  border-radius: 5px;
+}
+
+.buttons {
+	display: flex;
+	width: 15rem;
+}
+
+.buttons .button {
+	margin: 0px 10px;
+	width: 10vw;
+	height: 30px;
+  border-radius: 50px;
+  color: black;
+  background-color: rgb(247, 242, 242);
 }
