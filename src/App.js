@@ -57,6 +57,8 @@ function App() {
 			parsedTo > 100
 		) {
 			return alert("범위지정에는 100이하의 숫자만 입력하시오");
+		} else if (parsedFrom > parsedTo) {
+			return alert("시작날이 더 작은 수이어야 합니다.");
 		}
 		setAnswer(false);
 		saveQuestion(extractQuestion(parsedNumber, parsedFrom, parsedTo));

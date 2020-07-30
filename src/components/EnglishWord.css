@@ -8,9 +8,8 @@ li {
 	display: none;
 }
 
-
 .qAndASize {
-	height: 12vh;
+	height: 9vh;
 }
 
 .questions {
@@ -61,5 +60,4 @@ li {
 	width: 100%;
 	position: relative;
 	top: -6px;
-
 }
