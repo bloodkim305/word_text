@@ -37,7 +37,7 @@ const TopBar = ({ handleQuestion, handleAnswer }) => {
 	};
 
 	return (
-		<form>
+		<form className="topForm">
 			<div className="questionRange">
 				<input className="inputForm" placeholder="Day" {...fromNumber} />
 				<div>에서</div>

@@ -17,27 +17,53 @@ body,
 	height: 100%;
 	width: 100%;
 }
+@media (max-width: 900px) {
+	.questions {
+		display: flex;
+		justify-content: center;
+		align-items: flex-start;
+		flex-flow: row wrap;
+		padding: 50px;
+		padding-top: 15px;
+		width: 100%;
+		height: 100%;
+		margin: 0;
+	}
+	.questions .qAndA {
+		width: 40%;
+	}
+}
 
 @media (max-width: 600px) {
 	.questions {
 		display: flex;
 		padding: 50px;
-		padding-top: 30px;
+		padding-top: 15px;
 		width: 100%;
 	}
 
 	.questions .qAndA {
 		width: 100%;
+		height: 7.3vh;
 	}
 
-	form {
+	.buttons {
 		display: flex;
-		justify-content: center;
+		justify-content: end;
 	}
 
 	form .button {
 		margin: 10px;
 		width: 30%;
-		height: 20px;
+		height: 10px;
+	}
+
+	.inputForm {
+		height: 30px;
+	}
+	.inputForm + div {
+		font-size: 15px;
+		display: flex;
+		align-items: center;
 	}
 }
