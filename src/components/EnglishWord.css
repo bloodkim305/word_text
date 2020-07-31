@@ -9,7 +9,7 @@ li {
 }
 
 .qAndASize {
-	height: 10.5vh;
+	height: 5vh;
 }
 
 .questions {
@@ -24,7 +24,7 @@ li {
 	margin: 0;
 }
 
-.questions .qAndA {
+.qAndA {
 	width: 23%;
 	background-color: white;
 	margin-bottom: 0px;
@@ -40,7 +40,20 @@ li {
 	margin: 5px;
 	box-shadow: 0 13px 27px -5px rgba(50, 50, 93, 0.25),
 		0 8px 16px -8px rgba(0, 0, 0, 0.3), 0 -6px 16px -6px rgba(0, 0, 0, 0.025);
+	/* animation-duration: 2s;
+	animation-name: slidein; */
 }
+/* @keyframes slidein {
+	from {
+		margin-top: 100%;
+		width: 23%;
+	}
+
+	to {
+		margin-bottom: 0%;
+		width: 23%;
+	}
+} */
 
 .questions .qAndA .question {
 	font-size: 15px;
@@ -56,7 +69,7 @@ li {
 }
 
 .questions .qAndA .answer {
-	font-size: 12px;
+	font-size: 13px;
 	width: 100%;
 	position: relative;
 	top: -6px;

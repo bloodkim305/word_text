@@ -26,9 +26,10 @@ function App() {
 			test.push(rangeArray[wordIndex]);
 			i++;
 		}
-		console.log(rangeArray);
-		console.log(rangeArray.map((word) => Object.values(word)));
-		console.log(test.every((value) => rangeArray.includes(value)));
+		// console.log(wordsFile.filter((word) => word.english === "proceed")[0].han.length);
+		// console.log(wordsFile.map((word) => word.han.length).sort((a, b) => a - b));
+		// console.log(rangeArray.map((word) => Object.values(word)));
+		// console.log(test.every((value) => rangeArray.includes(value)));
 		return test;
 	};
 
